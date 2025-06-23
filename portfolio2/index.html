@@ -9,7 +9,10 @@
 <body>
   <header>
     <h1 class="logo">Naina</h1>
-    <nav>
+
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+
+    <nav id="navbar">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="projects.html">Projects</a></li>
@@ -33,13 +36,20 @@
       </div>
     </div>
     <div class="hero-img">
-      <img src="photo.jpg" alt="Naina Agarwal" class="profile-photo"
-      >
+      <img src="photo.jpg" alt="Naina Agarwal" class="profile-photo">
     </div>
   </section>
 
   <footer>
     <p>© Naina Agrawal</p>
   </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navbar = document.getElementById('navbar');
+    menuToggle.addEventListener('click', () => {
+      navbar.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
