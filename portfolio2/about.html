@@ -7,19 +7,23 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
+   <header class="navbar">
+  <div class="navbar-top">
     <h1 class="logo">Naina</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="skills.html">Skills</a></li>
-        <li><a href="certificates.html">Certificates</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+  </div>
+
+  <nav id="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="certificates.html">Certificates</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 <section id="about" class="about-section">
     <h2>About Me</h2>
     <div class="card glass-card">
@@ -50,5 +54,13 @@
   <footer>
     <p>© Naina Agrawal</p>
   </footer>
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navbar = document.getElementById('navbar');
+    menuToggle.addEventListener('click', () => {
+      navbar.classList.toggle('active');
+    });
+  </script>
+
 </body>
 </html>
